@@ -1,0 +1,17 @@
+{
+  "name": "Chess.com Anonymizer",
+  "description": "Hide player rating's, avatar's, names and flags. Reduces distractions while playing.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "./assets/chesscom-logo.png"
+  },
+  "permissions": ["storage", "tabs"],
+  "content_scripts": [
+    {
+        "matches": ["https://www.chess.com/*"],
+        "js": ["content.js"]
+    }
+  ]
+}
